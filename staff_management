@@ -1,0 +1,57 @@
+#!/usr/bin/python3
+# Staff Management
+class Staff:
+	staff_objects = []
+	staff_objects_id = 1
+	def __init__(self, fname, lname, room, position):
+		self.fname = fname
+		self.lname = lname
+		self.room = room
+		self.position = position
+		Staff.staff_objects.append(f'Staff Name: {fname}. Lastname: {lname}.\n Room: {room}. Position: {position}.')
+		Staff.staff_objects_id += 1
+
+	def staff_info(self):
+		self.objs = len(Staff.staff_objects)
+		print (f'''All Members: {self.objs}\n
+	ID: {Staff.staff_objects_id} Name: {self.fname}. Lastname: {self.lname}.\n
+	Room: {self.room}. Position: {self.position}
+	''')
+	def __repr__(self):
+		return (f'{self.fname} {self.lname}')
+	def add_user(self):
+		self.fname = addfname
+		self.lname = addlname
+		self.room = addroom
+		self.position = addposition
+		Staff.staff_objects.append(f'Staff Name: {addfname}. Lastname: {lnaddlnameame}.\n Room: {addroom}. Position: {addposition}.')
+	def del_user(self, id):
+		self.id = Staff.staff_objects_id
+		del self.id
+	def start_app(self):
+		print ('''
+		Select by id:\n
+		[2] Staff info \t [4] Add User \n
+		[6] Delete User \t 
+		''')
+		user_input = int(input('Menu ID: '))
+		counter = 1
+		if user_input == 2:
+			for object in Staff.staff_objects:
+				print (f'{counter}) {object}')
+				counter += 1
+		if user_input == 4:
+			print ('* Add user to database *')
+			input_fname = input('Name: ')
+			input_lname = input('Last Name :')
+			input_room = input('Room: ')
+			input_position = input('Position: ')
+			Staff.staff_objects.append(f'{input_fname} {input_lname} {input_room} {input_position}')
+			return Staff.start_app('')
+
+user01 = Staff("Patek", "Philipe", 44, "Director")
+user02 = Staff("Cater", "Pillar", 12, "Sale Asistant")
+user02 = Staff("Chema", "Lala", 223, "Manager")
+
+
+Staff.start_app('')
