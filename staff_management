@@ -24,7 +24,7 @@ class Staff:
 		self.lname = addlname
 		self.room = addroom
 		self.position = addposition
-		Staff.staff_objects.append(f'Staff Name: {addfname}. Lastname: {lnaddlnameame}.\n Room: {addroom}. Position: {addposition}.')
+		Staff.staff_objects.append(f'Staff Name: {addfname}. Lastname: {addlnameame}.\n Room: {addroom}. Position: {addposition}.')
 	
 	def del_user(self):
 		pass
@@ -50,8 +50,8 @@ class Staff:
 			Staff.staff_objects.append(f'Staff Name: {input_fname}. Lastname: {input_lname}.\n Room: {input_room}. Position: {input_position}.')
 			return Staff.start_app('')
 
-user01 = Staff("Patek", "Philipe", 44, "Director")
-user02 = Staff("Cater", "Pillar", 12, "Sale Asistant")
+user01 = Staff("Patek", "Philippe", 44, "Director")
+user02 = Staff("Cater", "Pillar", 12, "Sales Asistant")
 user02 = Staff("Chema", "Lala", 223, "Manager")
 
 
