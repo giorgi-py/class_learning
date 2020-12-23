@@ -25,9 +25,10 @@ class Staff:
 		self.room = addroom
 		self.position = addposition
 		Staff.staff_objects.append(f'Staff Name: {addfname}. Lastname: {lnaddlnameame}.\n Room: {addroom}. Position: {addposition}.')
-	def del_user(self, id):
-		self.id = Staff.staff_objects_id
-		del self.id
+	
+	def del_user(self):
+		pass
+
 	def start_app(self):
 		print ('''
 		Select by id:\n
@@ -37,16 +38,16 @@ class Staff:
 		user_input = int(input('Menu ID: '))
 		counter = 1
 		if user_input == 2:
-			for object in Staff.staff_objects:
-				print (f'{counter}) {object}')
+			for obj in Staff.staff_objects:
+				print (f'{counter}) {obj}')
 				counter += 1
 		if user_input == 4:
-			print ('* Add user to database *')
+			print ('* Add user *')
 			input_fname = input('Name: ')
 			input_lname = input('Last Name :')
 			input_room = input('Room: ')
 			input_position = input('Position: ')
-			Staff.staff_objects.append(f'{input_fname} {input_lname} {input_room} {input_position}')
+			Staff.staff_objects.append(f'Staff Name: {input_fname}. Lastname: {input_lname}.\n Room: {input_room}. Position: {input_position}.')
 			return Staff.start_app('')
 
 user01 = Staff("Patek", "Philipe", 44, "Director")
